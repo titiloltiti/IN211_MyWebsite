@@ -1,0 +1,90 @@
+<main role="main">
+    <div class="col-md-12">
+
+        <div class="row">
+            <div class="col col-md-3 bg-dark" style=" padding-top: 20px; padding-bottom: 20px;">
+                <div class="container">
+                    <div class="bg-success"><img
+                            style="height: 75%; width: 75%; border-radius: 10px; display : block ; margin-left: 40px; margin-bottom: 10px;"
+                            src="assets/img/portrait.jpg" alt="Portrait">
+                    </div>
+                    <div style="display :table; margin: 0 auto;">
+
+                        <button class="btn btn-dark" style="margin : 3px;">
+                            <a routerLink="services" style="text-decoration: none; color :rgb(17, 17, 17);">See
+                                services </a>
+                        </button>
+                        <button class="btn btn-dark">
+                            <a routerLink="skills" style="text-decoration: none; color :rgb(17, 17, 17);">See
+                                skills </a>
+                        </button>
+
+                    </div>
+                    <h4>You can contact me using one of the following :</h4>
+                    <ul>
+                        <li><b>Mobile Phone</b> : +33 6 31 92 90 01</li>
+                        <li><b>Email</b> : quentin.bihare@ensta-paris.fr</li>
+                        <li><b>Address</b> : Allée des Techniques Avancées
+                            Bat N Appt 325, 91120 Palaiseau, France</li>
+                    </ul>
+                    <h4>Or through this contact form</h4>
+                </div>
+            </div>
+            <div class="col col-md-9 col-12" style="padding: 20px;">
+                <form action="./index.html?order=valid" method="post">
+                    <fieldset>
+                        <legend>Contact form</legend>
+                        <div class="form-group row">
+                            <div class="col col-sm-6">
+
+                                <label for="nom" class="col-sm-2 col-form-label">Name</label>
+                                <input id="nom" type="text" name="nom" class="form-control" placeholder="Enter Name">
+                            </div>
+                            <div class="col-sm-6">
+
+                                <label for="prenom" class="col-sm-2 col-form-label">FirstName</label>
+                                <input id="prenom" type="text" placeholder="Enter FirstName" name="prenom"
+                                    class="form-control">
+                            </div>
+                        </div>
+                        <!-- maybe change phone to have a better style  -->
+                        <div class="form-group row">
+                            <div class="col col-md-4 col-12">
+                                <label for="telephone" class="col-sm-2 col-form-label">Phone</label>
+                                <input id="telephone" type="tel" class="form-control" placeholder="Enter Phone"
+                                    name="telephone">
+                            </div>
+                            <div class="col col-md-8 col-12">
+                                <label for="email" class="col-sm-8 col-form-label">E-mail <i
+                                        class="fa fa-question-circle" data-toggle="tooltip" data-placement="top"
+                                        title="" data-original-title="ex: name.firstname@email.com"></i></label>
+                                <input id="email" type="email" class="form-control" placeholder="Enter your email"
+                                    name="email">
+                            </div>
+
+                        </div>
+                        <div class="form-group">
+                            <label for="object" class="col-sm-2 col-form-label">Object</label>
+                            <input name="object" type="text" class="form-control"
+                                placeholder="Enter Object of your request">
+                        </div>
+                        <div class="form-group">
+                            <div class="col col-12">
+                                <label for="exampleTextarea">Your message</label>
+                                <textarea class="form-control" id="exampleTextarea" rows="3"
+                                    aria-describedby="textAreaHelp"></textarea>
+                                <small id="textAreaHelp" class="formtext text-muted">Feel free to ask any question.
+                                    I usually answer within 24h.</small>
+                            </div>
+                        </div>
+
+                        <div>
+                            <button class="btn btn-success" type="submit">Send</button>
+                            <button class="btn btn-outline-primary" type="reset">Cancel</button>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+</main>

@@ -8,26 +8,35 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item " routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
-                    <a class="nav-link" routerLink="">Home </a>
+                    <a class="nav-link" routerLink="">{{translations?.home}}</a>
                 </li>
                 <li class="nav-item" routerLinkActive="active">
-                    <a class="nav-link" routerLink="studies">Studies & Experience</a>
+                    <a class="nav-link" routerLink="studies">{{translations?.studies}}</a>
                 </li>
                 <li class="nav-item" routerLinkActive="active">
-                    <a class="nav-link" routerLink="skills">Skills</a>
+                    <a class="nav-link" routerLink="skills">{{translations?.skills}}</a>
                 </li>
                 <li class="nav-item" routerLinkActive="active">
-                    <a class="nav-link" routerLink="services">Services</a>
+                    <a class="nav-link" routerLink="services">{{translations?.services}}</a>
                 </li>
                 <li class="nav-item" routerLinkActive="active">
-                    <a class="nav-link" routerLink="portfolio">Portfolio</a>
+                    <a class="nav-link" routerLink="portfolio">{{translations?.portfolio}}</a>
                 </li>
                 <li class="nav-item" routerLinkActive="active">
-                    <a class="nav-link" routerLink="about">About me</a>
+                    <a class="nav-link" routerLink="about">{{translations?.about}}</a>
                 </li>
                 <li class="nav-item" routerLinkActive="active">
-                    <a class="nav-link" routerLink="contact">Contact</a>
+                    <a class="nav-link" routerLink="contact">{{translations?.contact}}</a>
                 </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <div class="btn-group">
+                    <button [class]="{'btn':true, 'btn-primary':true, 'btn-info':language==='fr'}"
+                        (click)="changeLang('fr')">FR</button>
+                    <button [class]="{'btn':true, 'btn-primary':true, 'btn-info':language==='en'}"
+                        (click)="changeLang('en')">EN</button>
+                </div>
+
             </ul>
         </div>
     </nav>

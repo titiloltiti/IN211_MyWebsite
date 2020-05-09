@@ -1,7 +1,5 @@
 <main role="main">
-    <!-- <div *ngIf="contactForm.submitted" class="alert alert-info">
-        Form submited
-    </div> -->
+
 
     <div class="col-md-12">
 
@@ -35,20 +33,34 @@
                 </div>
             </div>
             <div class="col col-md-9 col-12" style="padding: 20px;">
-                <form action="./index.html?order=valid" method="post">
+                <div *ngIf="contactForm.submitted" class="alert alert-info">
+                    Form submitted
+                </div>
+                <form #contactForm="ngForm" (ngSubmit)="processForm(contactForm)">
                     <fieldset>
                         <legend>Contact form</legend>
                         <div class="form-group row">
                             <div class="col col-sm-6">
-
                                 <label for="nom" class="col-sm-2 col-form-label">Name</label>
-                                <input id="nom" type="text" name="nom" class="form-control" placeholder="Enter Name">
+                                <input id="nom" type="text" name="nom" class="form-control" placeholder="Enter Name"
+                                    #posterName="ngModel" ngModel required>
+                                <div *ngIf="posterName.invalid && (posterName.touched || posterName.dirty)">
+                                    <div *ngIf="posterName.errors.required" class="alert alert-danger">
+                                        Name is required
+                                    </div>
+                                </div>
                             </div>
                             <div class="col-sm-6">
 
                                 <label for="prenom" class="col-sm-2 col-form-label">FirstName</label>
                                 <input id="prenom" type="text" placeholder="Enter FirstName" name="prenom"
-                                    class="form-control">
+                                    class="form-control" #posterFirstname="ngModel" ngModel required>
+                                <div
+                                    *ngIf="posterFirstname.invalid && (posterFirstname.touched || posterFirstname.dirty)">
+                                    <div *ngIf="posterFirstname.errors.required" class="alert alert-danger">
+                                        FirstName is required
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <!-- maybe change phone to have a better style  -->
@@ -56,34 +68,55 @@
                             <div class="col col-md-4 col-12">
                                 <label for="telephone" class="col-sm-2 col-form-label">Phone</label>
                                 <input id="telephone" type="tel" class="form-control" placeholder="Enter Phone"
-                                    name="telephone">
+                                    name="telephone" #posterPhone="ngModel" ngModel required>
+                                <div *ngIf="posterPhone.invalid && (posterPhone.touched || posterPhone.dirty)">
+                                    <div *ngIf="posterPhone.errors.required" class="alert alert-danger">
+                                        Phone is required
+                                    </div>
+                                </div>
                             </div>
                             <div class="col col-md-8 col-12">
                                 <label for="email" class="col-sm-8 col-form-label">E-mail <i
                                         class="fa fa-question-circle" data-toggle="tooltip" data-placement="top"
                                         title="" data-original-title="ex: name.firstname@email.com"></i></label>
                                 <input id="email" type="email" class="form-control" placeholder="Enter your email"
-                                    name="email">
+                                    name="email" #posterEmail="ngModel" ngModel required>
+                                <div *ngIf="posterEmail.invalid && (posterEmail.touched || posterEmail.dirty)">
+                                    <div *ngIf="posterEmail.errors.required" class="alert alert-danger">
+                                        E-mail is required
+                                    </div>
+                                </div>
                             </div>
 
                         </div>
                         <div class="form-group">
                             <label for="object" class="col-sm-2 col-form-label">Object</label>
                             <input name="object" type="text" class="form-control"
-                                placeholder="Enter Object of your request">
+                                placeholder="Enter Object of your request" #posterObject="ngModel" ngModel required>
+                            <div *ngIf="posterObject.invalid && (posterObject.touched || posterObject.dirty)">
+                                <div *ngIf="posterObject.errors.required" class="alert alert-danger">
+                                    Object is required
+                                </div>
+                            </div>
                         </div>
                         <div class="form-group">
                             <div class="col col-12">
                                 <label for="exampleTextarea">Your message</label>
-                                <textarea class="form-control" id="exampleTextarea" rows="3"
-                                    aria-describedby="textAreaHelp"></textarea>
+                                <textarea class="form-control" id="exampleTextarea" rows="3" name="message"
+                                    aria-describedby="textAreaHelp" #posterMessage="ngModel" ngModel
+                                    required></textarea>
                                 <small id="textAreaHelp" class="formtext text-muted">Feel free to ask any question.
-                                    I usually answer within 24h.</small>
+                                    I usually answer by email within 24h.</small>
+                                <div *ngIf="posterMessage.invalid && (posterMessage.touched || posterMessage.dirty)">
+                                    <div *ngIf="posterMessage.errors.required" class="alert alert-danger">
+                                        Message is required
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
                         <div class="btn btn-group">
-                            <button class="btn btn-success" type="submit">Send</button>
+                            <button class="btn btn-success" [disabled]="contactForm.invalid" type="submit">Send</button>
                             <button class="btn btn-outline-primary" type="reset">Cancel</button>
                         </div>
                     </fieldset>

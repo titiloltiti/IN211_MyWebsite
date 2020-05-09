@@ -12,4 +12,13 @@ export class ContactComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  processForm(form) {
+    if (form.invalid) {
+      alert("The form is incorrect")
+      return;
+    }
+    // this.store.addCharacter(form.value).subscribe((char: Character) => {
+    //   console.log("Submitted", char);
+    // });
+  }
 }

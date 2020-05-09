@@ -8,8 +8,14 @@ export interface IMenuLangSet {
     contact: string
 }
 
+export interface IFooterLangSet {
+    address: string,
+    phone: string
+}
+
 export interface ILangSet {
-    "menu": IMenuLangSet
+    "menu": IMenuLangSet,
+    "footer": IFooterLangSet
 }
 
 export interface ILang {
@@ -29,6 +35,10 @@ export const LANGS: ILang = {
             portfolio: "Portfolio",
             about: "About me",
             contact: "Contact"
+        },
+        "footer": {
+            address: "Address",
+            phone: "Phone"
         }
     },
     "fr": {
@@ -40,6 +50,10 @@ export const LANGS: ILang = {
             portfolio: "Portfolio",
             about: "À propos",
             contact: "Contact"
+        },
+        "footer": {
+            address: "Adresse",
+            phone: "Tel"
         }
     }
 }

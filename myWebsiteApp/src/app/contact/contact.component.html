@@ -13,23 +13,23 @@
                     <div style="display :table; margin: 0 auto;">
 
                         <button class="btn btn-dark" style="margin : 3px;">
-                            <a routerLink="services" style="text-decoration: none; color :rgb(17, 17, 17);">See
-                                services </a>
+                            <a routerLink="services"
+                                style="text-decoration: none; color :rgb(17, 17, 17);">{{translation?.services}} </a>
                         </button>
                         <button class="btn btn-dark">
-                            <a routerLink="skills" style="text-decoration: none; color :rgb(17, 17, 17);">See
-                                skills </a>
+                            <a routerLink="skills"
+                                style="text-decoration: none; color :rgb(17, 17, 17);">{{translation?.skills}} </a>
                         </button>
 
                     </div>
-                    <h4>You can contact me using one of the following :</h4>
+                    <h4>{{translation?.sidetxt1}}</h4>
                     <ul>
-                        <li><b>Mobile Phone</b> : +33 6 31 92 90 01</li>
+                        <li><b>{{translation?.phone}}</b> : +33 6 31 92 90 01</li>
                         <li><b>Email</b> : quentin.bihare@ensta-paris.fr</li>
-                        <li><b>Address</b> : Allée des Techniques Avancées
+                        <li><b>{{translation?.address}}</b> : Allée des Techniques Avancées
                             Bat N Appt 325, 91120 Palaiseau, France</li>
                     </ul>
-                    <h4>Or through this contact form</h4>
+                    <h4>{{translation?.sidetxt2}}</h4>
                 </div>
             </div>
             <div class="col col-md-9 col-12" style="padding: 20px;">
@@ -38,10 +38,10 @@
                 </div>
                 <form #contactForm="ngForm" (ngSubmit)="processForm(contactForm)">
                     <fieldset>
-                        <legend>Contact form</legend>
+                        <legend>{{translation?.form}}</legend>
                         <div class="form-group row">
                             <div class="col col-sm-6">
-                                <label for="nom" class="col-sm-2 col-form-label">Name</label>
+                                <label for="nom" class="col-sm-2 col-form-label">{{translation?.name}}</label>
                                 <input id="nom" type="text" name="nom" class="form-control" placeholder="Enter Name"
                                     #posterName="ngModel" ngModel required>
                                 <div *ngIf="posterName.invalid && (posterName.touched || posterName.dirty)">
@@ -52,7 +52,7 @@
                             </div>
                             <div class="col-sm-6">
 
-                                <label for="prenom" class="col-sm-2 col-form-label">FirstName</label>
+                                <label for="prenom" class="col-sm-2 col-form-label">{{translation?.firstname}}</label>
                                 <input id="prenom" type="text" placeholder="Enter FirstName" name="prenom"
                                     class="form-control" #posterFirstname="ngModel" ngModel required>
                                 <div
@@ -66,7 +66,7 @@
                         <!-- maybe change phone to have a better style  -->
                         <div class="form-group row">
                             <div class="col col-md-4 col-12">
-                                <label for="telephone" class="col-sm-2 col-form-label">Phone</label>
+                                <label for="telephone" class="col-sm-2 col-form-label">{{translation?.phone1}}</label>
                                 <input id="telephone" type="tel" class="form-control" placeholder="Enter Phone"
                                     name="telephone" #posterPhone="ngModel" ngModel required>
                                 <div *ngIf="posterPhone.invalid && (posterPhone.touched || posterPhone.dirty)">
@@ -90,7 +90,7 @@
 
                         </div>
                         <div class="form-group">
-                            <label for="object" class="col-sm-2 col-form-label">Object</label>
+                            <label for="object" class="col-sm-2 col-form-label">{{translation?.object}}</label>
                             <input name="object" type="text" class="form-control"
                                 placeholder="Enter Object of your request" #posterObject="ngModel" ngModel required>
                             <div *ngIf="posterObject.invalid && (posterObject.touched || posterObject.dirty)">
@@ -101,12 +101,12 @@
                         </div>
                         <div class="form-group">
                             <div class="col col-12">
-                                <label for="exampleTextarea">Your message</label>
+                                <label for="exampleTextarea">{{translation?.message}}</label>
                                 <textarea class="form-control" id="exampleTextarea" rows="3" name="message"
                                     aria-describedby="textAreaHelp" #posterMessage="ngModel" ngModel
                                     required></textarea>
-                                <small id="textAreaHelp" class="formtext text-muted">Feel free to ask any question.
-                                    I usually answer by email within 24h.</small>
+                                <small id="textAreaHelp"
+                                    class="formtext text-muted">{{translation?.message_small}}</small>
                                 <div *ngIf="posterMessage.invalid && (posterMessage.touched || posterMessage.dirty)">
                                     <div *ngIf="posterMessage.errors.required" class="alert alert-danger">
                                         Message is required
@@ -116,8 +116,9 @@
                         </div>
 
                         <div class="btn btn-group">
-                            <button class="btn btn-success" [disabled]="contactForm.invalid" type="submit">Send</button>
-                            <button class="btn btn-outline-primary" type="reset">Cancel</button>
+                            <button class="btn btn-success" [disabled]="contactForm.invalid"
+                                type="submit">{{translation?.sendbtn}}</button>
+                            <button class="btn btn-outline-primary" type="reset">{{translation?.cancelbtn}}</button>
                         </div>
                     </fieldset>
                 </form>

@@ -10,13 +10,13 @@
                     <div>
 
                         <ul>
-                            <li><b>Mobile Phone</b> : +33 6 31 92 90 01</li>
+                            <li><b>{{translation?.phone}}</b> : +33 6 31 92 90 01</li>
                             <li><b>Email</b> : quentin.bihare@ensta-paris.fr</li>
-                            <li><b>Address</b> : Allée des Techniques Avancées
+                            <li><b>{{translation?.address}}</b> : Allée des Techniques Avancées
                                 Bat N Appt 325, 91120 Palaiseau, France</li>
-                            <li><b>Nationality</b> : French</li>
-                            <li><b>Date of birth</b> : 10th April 1999</li>
-                            <li><b>Driving</b></li>
+                            <li><b>{{translation?.nationality}}</b> : French</li>
+                            <li><b>{{translation?.birthday}}</b> : 10th April 1999</li>
+                            <li><b>{{translation?.driving}}</b></li>
                         </ul>
                     </div>
                     <div style="display :table; margin: 0 auto;">
@@ -25,15 +25,15 @@
                             <a routerLink="contact" style="text-decoration: none; color :rgb(17, 17, 17);">Contact</a>
                         </button>
                         <button class="btn btn-dark">
-                            <a routerLink="skills" style="text-decoration: none; color :rgb(17, 17, 17);">See
-                                skills </a>
+                            <a routerLink="skills"
+                                style="text-decoration: none; color :rgb(17, 17, 17);">{{translation?.skills}} </a>
                         </button>
 
                     </div>
                 </div>
             </div>
             <div class="col col-md-9 col-12" style="padding: 20px;">
-                <h2>Services I can provide</h2>
+                <h2>{{translation?.projet}}</h2>
                 <hr class="my-4">
                 <div class="row" style="padding-bottom: 10px;">
                     <div class="col col-md-6 col-12">
@@ -43,9 +43,8 @@
                                 <i class="fa fa-window-maximize fa-2x"></i>
                             </div>
                             <div class="col col-md-11 col-10">
-                                <h4>Website</h4>
-                                <p>With the skills I have acquired in many web programming languages, I can design
-                                    responsive and dynamic websites for you or your company</p>
+                                <h4>{{translation?.projet1}}</h4>
+                                <p>{{translation?.descr1}}</p>
                             </div>
                         </div>
                     </div>
@@ -56,9 +55,8 @@
                                 <i class="fa fa-server fa-2x"></i>
                             </div>
                             <div class="col col-md-11 col-10">
-                                <h4>WebApp</h4>
-                                <p>I can develop safe webapps providing all sorts of services (Access database,
-                                    interact with clients...)</p>
+                                <h4>{{translation?.projet2}}</h4>
+                                <p>{{translation?.descr2}}</p>
                             </div>
                         </div>
                     </div>
@@ -71,9 +69,8 @@
                                 <i class="fa fa-book fa-2x"></i>
                             </div>
                             <div class="col col-md-11 col-10">
-                                <h4>Translation</h4>
-                                <p>Being fluent in both english and french, with a scientific background, I can
-                                    translate most technical documents and websites between those languages</p>
+                                <h4>{{translation?.projet3}}</h4>
+                                <p>{{translation?.descr3}}</p>
                             </div>
                         </div>
                     </div>
@@ -84,9 +81,8 @@
                                 <i class="fa fa-shield fa-2x"></i>
                             </div>
                             <div class="col col-md-11 col-10">
-                                <h4>Network Protection</h4>
-                                <p>Having a strong background in computer science and specifically in cybersecurity,
-                                    I can make your professional network a true fortress</p>
+                                <h4>{{translation?.projet4}}</h4>
+                                <p>{{translation?.descr4}}</p>
                             </div>
                         </div>
                     </div>
@@ -99,9 +95,8 @@
                                 <i class="fa fa-user-secret fa-2x"></i>
                             </div>
                             <div class="col col-md-11 col-10">
-                                <h4>Ethical Hacking</h4>
-                                <p>I can try and get inside your professional network in order to identify its
-                                    weaknesses and find solutions to protect yourself</p>
+                                <h4>{{translation?.projet5}}</h4>
+                                <p>{{translation?.descr5}}</p>
                             </div>
                         </div>
                     </div>
@@ -112,17 +107,14 @@
                                 <i class="fa fa-check-circle fa-2x"></i>
                             </div>
                             <div class="col col-md-11 col-10">
-                                <h4>Application Testing</h4>
-                                <p>I have notions about Test Driven Development and can successfully run a test
-                                    campaign to validate an application</p>
+                                <h4>{{translation?.projet6}}</h4>
+                                <p>{{translation?.descr6}}</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="container">
-                    <h4>If you are interested in any of these, or if you have any question, feel free to <a
-                            routerLink="contact">contact
-                            me</a>
+                    <h4>{{translation?.more}} <a routerLink="contact">{{translation?.contact}}</a>
                     </h4>
                 </div>
             </div>

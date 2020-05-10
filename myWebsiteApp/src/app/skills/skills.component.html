@@ -10,13 +10,13 @@
                     <div>
 
                         <ul>
-                            <li><b>Mobile Phone</b> : +33 6 31 92 90 01</li>
+                            <li><b>{{translation?.phone}}</b> : +33 6 31 92 90 01</li>
                             <li><b>Email</b> : quentin.bihare@ensta-paris.fr</li>
-                            <li><b>Address</b> : Allée des Techniques Avancées
+                            <li><b>{{translation?.address}}</b> : Allée des Techniques Avancées
                                 Bat N Appt 325, 91120 Palaiseau, France</li>
-                            <li><b>Nationality</b> : French</li>
-                            <li><b>Date of birth</b> : 10th April 1999</li>
-                            <li><b>Driving</b></li>
+                            <li><b>{{translation?.nationality}}</b> : French</li>
+                            <li><b>{{translation?.birthday}}</b> : 10th April 1999</li>
+                            <li><b>{{translation?.driving}}</b></li>
                         </ul>
                     </div>
                     <div style="display :table; margin: 0 auto;" class="text-center">
@@ -26,23 +26,22 @@
                             </a>
                         </button>
                         <button class="btn btn-dark" style="margin : 3px;">
-                            <a routerLink="services" style="text-decoration: none; color :rgb(17, 17, 17);">See
-                                services </a>
+                            <a routerLink="services"
+                                style="text-decoration: none; color :rgb(17, 17, 17);">{{translation?.services}} </a>
                         </button>
 
                     </div>
                 </div>
             </div>
             <div class="col col-md-9 col-12" style="padding: 20px;">
-                <h1>My skills</h1>
+                <h1>{{translation?.skills}}</h1>
                 <hr class="my-4">
                 <div class="row">
                     <div class="col col-md-6 col-12">
                         <div class="card mb-3">
-                            <h3 class="card-header">Languages</h3>
+                            <h3 class="card-header">{{translation?.et1title}}</h3>
                             <div class="card-body">
-                                <h5 class="card-title">I have been studying several languages which are the
-                                    following:</h5>
+                                <h5 class="card-title">{{translation?.et1descr}}</h5>
                             </div>
 
                             <a class="text-center bg-light" data-toggle="collapse" href="#collapseLanguages"
@@ -54,10 +53,10 @@
                             <div class="collapse" id="collapseLanguages">
 
                                 <ul class="list-group list-group-flush">
-                                    <li class="list-group-item">French - Native speaker</li>
-                                    <li class="list-group-item">English - Fluent</li>
-                                    <li class="list-group-item">German - Intermediate level</li>
-                                    <li class="list-group-item">Chinese - Beginner level</li>
+                                    <li class="list-group-item">{{translation?.et1a}}</li>
+                                    <li class="list-group-item">{{translation?.et1b}}</li>
+                                    <li class="list-group-item">{{translation?.et1c}}</li>
+                                    <li class="list-group-item">{{translation?.et1d}}</li>
                                 </ul>
                             </div>
                         </div>
@@ -65,10 +64,9 @@
                     </div>
                     <div class="col col-md-6 col-12">
                         <div class="card mb-3">
-                            <h3 class="card-header">Computer Science</h3>
+                            <h3 class="card-header">{{translation?.et2title}}</h3>
                             <div class="card-body">
-                                <h5 class="card-title">My studies and experience gave me a strong academic
-                                    backgroung in the following fields of computer science:</h5>
+                                <h5 class="card-title">{{translation?.et2descr}}</h5>
                             </div>
 
                             <a class="text-center bg-light" data-toggle="collapse" href="#collapseComputer"
@@ -80,11 +78,11 @@
                             <div class="collapse" id="collapseComputer">
 
                                 <ul class="list-group list-group-flush">
-                                    <li class="list-group-item">Cybersecurity</li>
-                                    <li class="list-group-item">Network architecture</li>
-                                    <li class="list-group-item">Computer architecture and microprocessors</li>
-                                    <li class="list-group-item">Operating systems</li>
-                                    <li class="list-group-item">Programming (C, Java, C++, Ocaml)</li>
+                                    <li class="list-group-item">{{translation?.et2a}}</li>
+                                    <li class="list-group-item">{{translation?.et2b}}</li>
+                                    <li class="list-group-item">{{translation?.et2c}}</li>
+                                    <li class="list-group-item">{{translation?.et2d}}</li>
+                                    <li class="list-group-item">{{translation?.et2e}}</li>
                                 </ul>
                             </div>
                         </div>
@@ -93,11 +91,9 @@
                 <div class="row">
                     <div class="col col-md-6 col-12">
                         <div class="card mb-3">
-                            <h3 class="card-header">Management</h3>
+                            <h3 class="card-header">{{translation?.et3title}}</h3>
                             <div class="card-body">
-                                <h5 class="card-title">Working at TAEP Junior Company and being part of its board
-                                    brought me many management
-                                    skills : </h5>
+                                <h5 class="card-title">{{translation?.et3descr}}</h5>
                             </div>
 
                             <a class="text-center bg-light" data-toggle="collapse" href="#collapseManagement"
@@ -109,11 +105,11 @@
                             <div class="collapse" id="collapseManagement">
 
                                 <ul class="list-group list-group-flush">
-                                    <li class="list-group-item">Sense of responsibilities</li>
-                                    <li class="list-group-item">Adaptability</li>
-                                    <li class="list-group-item">Ability to take decisions</li>
-                                    <li class="list-group-item">Facilitate a meeting</li>
-                                    <li class="list-group-item">Oral and written communication in a company</li>
+                                    <li class="list-group-item">{{translation?.et3a}}</li>
+                                    <li class="list-group-item">{{translation?.et3b}}</li>
+                                    <li class="list-group-item">{{translation?.et3c}}</li>
+                                    <li class="list-group-item">{{translation?.et3d}}</li>
+                                    <li class="list-group-item">{{translation?.et3e}}</li>
                                 </ul>
                             </div>
                         </div>
@@ -121,10 +117,9 @@
                     </div>
                     <div class="col col-md-6 col-12">
                         <div class="card mb-3">
-                            <h3 class="card-header">Soft skills</h3>
+                            <h3 class="card-header">{{translation?.et4title}}</h3>
                             <div class="card-body">
-                                <h5 class="card-title">During my studies, thanks to music, community involvement and
-                                    because of who I am I develop the following soft skills:</h5>
+                                <h5 class="card-title">{{translation?.et4descr}}</h5>
                             </div>
 
                             <a class="text-center bg-light" data-toggle="collapse" href="#collapseSoft" id="collapseDiv"
@@ -135,10 +130,10 @@
                             <div class="collapse" id="collapseSoft">
 
                                 <ul class="list-group list-group-flush">
-                                    <li class="list-group-item">Good oral and written communication</li>
-                                    <li class="list-group-item">Talking in front of an audience</li>
-                                    <li class="list-group-item">Seriousness and organization</li>
-                                    <li class="list-group-item">Strong analysis capacities</li>
+                                    <li class="list-group-item">{{translation?.et4a}}</li>
+                                    <li class="list-group-item">{{translation?.et4b}}</li>
+                                    <li class="list-group-item">{{translation?.et4c}}</li>
+                                    <li class="list-group-item">{{translation?.et4d}}</li>
                                 </ul>
                             </div>
                         </div>

@@ -11,24 +11,24 @@
                     <div>
 
                         <ul>
-                            <li><b>Mobile Phone</b> : +33 6 31 92 90 01</li>
+                            <li><b>{{translation?.phone}}</b> : +33 6 31 92 90 01</li>
                             <li><b>Email</b> : quentin.bihare@ensta-paris.fr</li>
-                            <li><b>Address</b> : Allée des Techniques Avancées
+                            <li><b>{{translation?.address}}</b> : Allée des Techniques Avancées
                                 Bat N Appt 325, 91120 Palaiseau, France</li>
-                            <li><b>Nationality</b> : French</li>
-                            <li><b>Date of birth</b> : 10th April 1999</li>
-                            <li><b>Driving</b></li>
+                            <li><b>{{translation?.nationality}}</b> : French</li>
+                            <li><b>{{translation?.birthday}}</b> : 10th April 1999</li>
+                            <li><b>{{translation?.driving}}</b></li>
                         </ul>
                     </div>
                     <div style="display :table; margin: 0 auto;">
 
                         <button class="btn btn-dark" style="margin : 3px;">
-                            <a routerLink="services" style="text-decoration: none; color :rgb(17, 17, 17);">See
-                                services </a>
+                            <a routerLink="services"
+                                style="text-decoration: none; color :rgb(17, 17, 17);">{{translation?.services}}</a>
                         </button>
                         <button class="btn btn-dark">
-                            <a routerLink="skills" style="text-decoration: none; color :rgb(17, 17, 17);">See
-                                skills </a>
+                            <a routerLink="skills"
+                                style="text-decoration: none; color :rgb(17, 17, 17);">{{translation?.skills}}</a>
                         </button>
 
                     </div>
@@ -40,31 +40,22 @@
                 <div class="container">
                     <div style="margin-top : 20px;">
 
-                        <h1 class="display-4">Quentin Biharé - Engineering Student</h1>
+                        <h1 class="display-4">Quentin Biharé - {{translation?.ingenieur}}</h1>
                         <hr class="my-4">
-                        <p class="lead">I am currently studying computer science at the National Graduate School of
-                            Advanced
-                            Techniques of Paris (ENSTA Paris), France, top ten among the best highly selective
-                            ‘Grandes
-                            Ecoles’.</p>
+                        <p class="lead">{{translation?.txt1}}</p>
                         <p class="lead">
-                            I am targetting a 6 months internship in the field of cybersecurity during which I
-                            should achieve a technical project. This internship would be an opportunity for me to
-                            have a first concrete professional experience, in an actual company, which will be
-                            decisive in finding my first job.
+                            {{translation?.txt2}}
                         </p>
                     </div>
                     <div class="jumbotron">
-                        <h1 class="display-3">Contact me now!</h1>
+                        <h1 class="display-3">{{translation?.contact}}</h1>
                         <hr class="my-4">
-                        <p class="lead">If you are interested in any of my skills or services, or if you have any
-                            question, feel free to contact me!</p>
+                        <p class="lead">{{translation?.contacttxt}}</p>
                         <p class="lead">
                             <a class="btn btn-primary btn-lg" routerLink="skills" role="button"
-                                style="margin-right: 5px;">See
-                                skills</a>
+                                style="margin-right: 5px;">{{translation?.skills}}</a>
                             <a class="btn btn-primary btn-lg" routerLink="services" role="button"
-                                style="margin-right: 5px;">See services</a>
+                                style="margin-right: 5px;">{{translation?.services}}</a>
                             <a class="btn btn-outline-success btn-lg" routerLink="contact" role="button">Contact</a>
                         </p>
                     </div>

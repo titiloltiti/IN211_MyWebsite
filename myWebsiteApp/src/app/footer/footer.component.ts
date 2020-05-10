@@ -9,12 +9,10 @@ import { IFooterLangSet, ILangSet } from '../constants';
 })
 export class FooterComponent implements OnInit {
 
-  translation: IFooterLangSet = null;  //data translation needed for the navbar
+  translation: IFooterLangSet = null;
   constructor(private lang: LangService) { }
 
   ngOnInit(): void {
-    // we subscribe here to the changes in the lang service
-    // you'll do this for all the components that listen for the translation stream
     this.lang.translation$.subscribe((t: ILangSet) => {
       this.translation = t.footer
     })

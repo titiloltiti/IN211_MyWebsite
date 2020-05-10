@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { LangService } from '../lang.service';
+import { IContactLangSet, ILangSet } from '../constants';
 
 @Component({
   selector: 'app-contact',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactComponent implements OnInit {
 
-  constructor() { }
+  translation: IContactLangSet = null;
+  constructor(private lang: LangService) { }
 
   ngOnInit(): void {
+    this.lang.translation$.subscribe((t: ILangSet) => {
+      this.translation = t.contact
+    })
   }
 
   processForm(form) {
@@ -17,8 +23,5 @@ export class ContactComponent implements OnInit {
       alert("The form is incorrect")
       return;
     }
-    // this.store.addCharacter(form.value).subscribe((char: Character) => {
-    //   console.log("Submitted", char);
-    // });
   }
 }

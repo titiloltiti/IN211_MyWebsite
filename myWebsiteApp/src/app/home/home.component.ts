@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { LangService } from '../lang.service';
+import { IHomeLangSet, ILangSet } from '../constants';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  translation: IHomeLangSet = null;
+  constructor(private lang: LangService) { }
 
   ngOnInit(): void {
+    this.lang.translation$.subscribe((t: ILangSet) => {
+      this.translation = t.home
+    })
   }
-
 }
+ 
